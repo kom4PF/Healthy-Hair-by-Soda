@@ -1,0 +1,374 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff6f91, #ffb3c1); /* Gradient rose et clair */
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #333333; /* Couleur de fond plus foncée */
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Logo Styling */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.logo p {
+    font-size: 28px;
+    font-weight: bold;
+    margin-left: 15px;
+    color: #ff6f91; /* Utilisation du rose */
+    font-family: 'Dancing Script', cursive;
+}
+
+/* Navigation Links */
+ul.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+ul.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 10px;
+    transition: color 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+ul.nav-links a:hover {
+    color: #ff6f91; /* Rose vif au lieu de jaune */
+    border-bottom: 2px solid #ff6f91;
+}
+
+/* Content Section */
+.content-items {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 120px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000;
+}
+
+.content {
+    max-width: 900px;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 25px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Section Produits */
+.section.produits {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 50px 20px;
+    gap: 30px;
+}
+
+/* Styling for Product Images */
+.produit img {
+    width: 200px; /* Réduction de la largeur à 200px */
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.produit-image-small {
+    width: 150px;
+    height: auto;
+    margin: 10px;
+}
+
+.card.produit {
+    background-color: #fff;
+    color: #333;
+    width: 30%;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.card.produit:hover {
+    transform: translateY(-10px);
+    background-color: #ffb3c1; /* Rose poudré */
+}
+
+/* Gamme Complète (comme un produit normal) */
+.card.bundle {
+    background-color: #fff;
+    color: #333;
+    width: 30%;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.card.bundle:hover {
+    transform: translateY(-10px);
+    background-color: #ffb3c1; /* Rose poudré */
+}
+
+/* Duo Crème et Sérum (comme un produit normal) */
+.card.duo {
+    background-color: #fff;
+    color: #333;
+    width: 30%;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.card.duo:hover {
+    transform: translateY(-10px);
+    background-color: #ffb3c1; /* Rose poudré */
+}
+
+/* Gamme Image */
+.bundle-image, .bundle-image-modal {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+/* Modals Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top: 50px;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Close Button */
+.close {
+    color: #333;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #ff6f91;
+}
+
+/* Limitation de la taille des images dans les modals */
+.modal-content img {
+    max-width: 80%; /* Limitation à 80% de la largeur de la modale */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Select Size for Spray */
+.select-size {
+    margin-top: 20px;
+}
+
+.select-size label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.select-size select {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Section Créateur */
+.creator-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background: linear-gradient(135deg, #ff6f91, #ffb3c1); /* Nouveau gradient */
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    margin: 50px 0;
+}
+
+/* Conteneur pour le créateur */
+.creator-content {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    gap: 30px;
+}
+
+/* Image du créateur réduite */
+.creator-image img {
+    width: 250px; /* Réduction de la taille de l'image */
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Texte du créateur */
+.creator-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #333;
+    padding: 20px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.creator-text h2 {
+    font-size: 32px;
+    color: #ff6f91; /* Rose vif */
+    margin-bottom: 15px;
+}
+
+.creator-text p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.creator-text strong {
+    color: #ff6f91; /* Rose pour les points importants */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+/* Button Link */
+a.button-link {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #ff6f91; /* Rose vif */
+    color: #fff;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+a.button-link:hover {
+    background-color: #ffb3c1;
+    transform: translateY(-5px);
+    color: #000;
+}
+
+/* Responsive Design for iPhone */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .logo img {
+        width: 40px; /* Adjusted logo size for mobile */
+    }
+
+    .logo p {
+        font-size: 20px; /* Smaller font size for mobile */
+    }
+
+    ul.nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .card.produit, .card.bundle, .card.duo {
+        width: 90%; /* Take more space for product cards */
+    }
+
+    .produit img, .bundle-image {
+        width: 100px; /* Smaller images for mobile */
+        height: auto;
+    }
+
+    .creator-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .creator-image img {
+        width: 150px; /* Smaller creator image */
+    }
+
+    .creator-text {
+        padding: 20px;
+        font-size: 14px; /* Adjust text size for mobile */
+    }
+
+    footer {
+        padding: 15px;
+    }
+}

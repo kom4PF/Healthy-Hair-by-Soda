@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Produits - Healthy Hair by Soda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <img src="logo-soda-hair.png" alt="Logo Soda Hair">
+            <p>Healthy Hair by Soda</p>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">ACCUEIL</a></li>
+            <li><a href="about.html">À PROPOS</a></li>
+            <li><a href="produits.html">NOS PRODUITS</a></li>
+        </ul>
+    </nav>
+
+    <!-- Section Produits -->
+    <div class="content-items">
+        <div class="content">
+            <h1>Nos Produits</h1>
+            <p>Découvrez nos produits capillaires de haute qualité. Cliquez sur un produit pour en savoir plus.</p>
+
+            <!-- Section Produits avec images -->
+            <div class="section produits">
+                <!-- Produit Crème -->
+                <div class="card produit" onclick="showModal('creme')">
+                    <img src="Creme.png" alt="Crème Hydratante" class="produit-image">
+                    <h3>Crème Hydratante</h3>
+                    <p><strong>Prix : 3000fcfa</strong></p>
+                </div>
+
+                <!-- Produit Spray avec options 30 ml ou 60 ml -->
+                <div class="card produit" onclick="showModal('spray')">
+                    <img src="spray.png" alt="Spray Hydratant" class="produit-image">
+                    <h3>Spray Hydratant</h3>
+                    <p><strong>Prix : 3000fcfa</strong></p>
+                </div>
+
+                <!-- Produit Huile Capillaire avec options 30 ml et 60 ml -->
+                <div class="card produit" onclick="showModal('huile')">
+                    <img src="huile.png" alt="Huile Capillaire" class="produit-image">
+                    <h3>Huile Capillaire</h3>
+                    <p><strong>Prix : 3000fcfa (30ml), 5500fcfa (60ml)</strong></p>
+                </div>
+
+                <!-- Gamme Complète (comme un produit normal) -->
+                <div class="card produit" onclick="showModal('bundle')">
+                    <img src="gamme-complete.png" alt="Gamme Complète" class="produit-image">
+                    <h3>Bigkits</h3>
+                    <p><strong>Prix : 8000fcfa</strong></p>
+                </div>
+
+                <!-- Duo Crème et Sérum -->
+                <div class="card produit" onclick="showModal('duo')">
+                    <img src="duo-spray-serum.png" alt="Duo spray et Sérum" class="produit-image">
+                    <h3>Duo Spray & Sérum</h3>
+                    <p><strong>Prix : 8500fcfa</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Crème Hydratante -->
+    <div id="creme-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('creme')">&times;</span>
+            <h2>Crème Hydratante</h2>
+            <p>Préparez-vous à être obsédé par notre beurre de cheveux hydratant. Fabriqué avec de l’extrait des poudres ayurvediques 100 % naturel, des beurres et des huiles non raffinés qui sont utilisés par les femmes d’Afrique pour conserver leur longueur de cheveux pendant des siècles. Notre formule d’eau à 0 % signifie que vos cheveux peuvent absorber tous les avantages de ces ingrédients naturels nourrissants. Ce beurre retiendra l’humidité dans les cheveux plus longtemps, ce qui renforce et prévient la casse. Il protège également les cheveux et les laisse brillants, doux et soyeux.💁🏼‍♀️</p>
+            <img src="Creme.png" alt="Crème Hydratante" class="produit-image">
+            <p><strong>Prix : 3000fcfa</strong></p>
+        </div>
+    </div>
+
+    <!-- Modal Spray Hydratant avec options de taille -->
+    <div id="spray-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('spray')">&times;</span>
+            <h2>Spray Hydratant</h2>
+            <p>Ce spray capillaire polyvalent est parfait pour l'hydratation quotidienne, la revitalisation des cheveux, l’accélération de la pousse, le traitement du cuir chevelu, l'étanchéité de l'humidité, et bien plus encore. Il lutte contre les démangeaisons du cuir chevelu, ce spray convient à tous les types de cheveux.</p>
+            <img src="spray.png" alt="Spray Hydratant" class="produit-image">
+            <p><strong>Prix : 3000fcfa</strong></p>
+        </div>
+    </div>
+
+    <!-- Modal Huile Capillaire avec options de taille -->
+    <div id="huile-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('huile')">&times;</span>
+            <h2>Huile Capillaire</h2>
+            <p>Notre huile est intensément formulée pour vous aider à obtenir des cheveux plus longs et plus sains. Elle est enrichie de fortes concentrations des ingrédients les plus efficaces. Infusée avec des poudres naturelles et des huiles qui renforcent les follicules pileux. Ce mélange d’huile de densité moyenne contient de l’huile de ricin noire et cinq huiles essentielles nourrissantes qui sont garanties pour fournir à vos cheveux et votre cuir chevelu tous les nutriments nécessaires à la croissance.</p>
+            <div class="huile-images">
+                <img src="huile.png" alt="Bouteille 30 ml" class="produit-image-small">
+                <img src="huile-60ml.png" alt="Deux bouteilles 30 ml (équivalent 60 ml)" class="produit-image-small">
+            </div>
+            <div class="select-size">
+                <label for="huile-size">Taille :</label>
+                <select id="huile-size">
+                    <option value="30ml">30 ml - 3000fcfa</option>
+                    <option value="60ml">2 x 30 ml (60 ml) - 5500fcfa</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Duo Crème et Sérum -->
+    <div id="duo-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('duo')">&times;</span>
+            <h2>Duo spray & Sérum</h2>
+            <p>Ce duo réunit le spray hydratant et le sérum nourrissant pour offrir à vos cheveux un soin complet et il est très adapté pour les locks.</p>
+            <img src="duo-spray-serum.png" alt="Duo spray & Sérum" class="produit-image">
+            <p><strong>Prix : 8500fcfa</strong></p>
+        </div>
+    </div>
+
+    <!-- Modal Gamme Complète -->
+    <div id="bundle-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('bundle')">&times;</span>
+            <h2>Bigkits</h2>
+            <p>Achetez la gamme complète (Crème, Spray Hydratant, et Huile Capillaire) à un prix spécial.</p>
+            <img src="gamme-complete.png" alt="Gamme Complète" class="bundle-image-modal">
+            <p><strong>Prix : 8000fcfa</strong></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Healthy Hair by Soda. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Script pour gérer les modals -->
+    <script>
+        // Fonction pour ouvrir la modale correspondante
+        function showModal(product) {
+            const modal = document.getElementById(product + '-modal');
+            if (modal) {
+                modal.style.display = 'block'; // Affiche la modale
+            }
+        }
+    
+        // Fonction pour fermer la modale correspondante
+        function closeModal(product) {
+            const modal = document.getElementById(product + '-modal');
+            if (modal) {
+                modal.style.display = 'none'; // Cache la modale
+            }
+        }
+    
+        // Fermer la modale en cliquant en dehors de la modale
+        window.onclick = function(event) {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = 'none'; // Cache la modale si on clique en dehors
+                }
+            });
+        }
+    
+        // Fermer la modale avec la touche 'Escape'
+        window.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                const modals = document.querySelectorAll('.modal');
+                modals.forEach(modal => {
+                    modal.style.display = 'none'; // Cache la modale si on appuie sur la touche Escape
+                });
+            }
+        });
+    </script>
+</body>
+</html>
